@@ -3,9 +3,13 @@ import { TorlnSymbol } from '@vanta-design/desktop/src/components/atom/torln-sym
 import { Column } from '@vanta-design/desktop/src/components/layout/column';
 import { Row } from '@vanta-design/desktop/src/components/layout/row';
 import { fullHeight } from '@vanta-design/desktop/src/styles/utils.css';
+import { useNavigate } from 'react-router-dom';
+import { dynamic } from '~/utils/component';
 import { content, dragRegion } from './styles.css';
 
-export default function () {
+function IndexPage() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={dragRegion} data-tauri-drag-region />
@@ -15,7 +19,9 @@ export default function () {
             <TorlnSymbol size={96} />
           </Column>
           <Column gap={8}>
-            <Button.Large>Sign in</Button.Large>
+            <Button.Large onClick={() => navigate('/app')}>
+              Sign in
+            </Button.Large>
             <Button.Large variant='secondary'>Sign up</Button.Large>
           </Column>
         </Column>
@@ -23,3 +29,5 @@ export default function () {
     </>
   );
 }
+
+export default dynamic(IndexPage);
