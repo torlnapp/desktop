@@ -7,7 +7,15 @@
     "dev": "tauri dev",
     "vite": "vite",
     "vite:build": "tsc && vite build",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "commit": "bun run format && git add . && cz",
+    "format": "bun run check && biome check --fix",
+    "check": "tsc --noEmit"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "@tauri-apps/api": "^2.6.0",
@@ -20,13 +28,17 @@
     "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.0.6",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@tauri-apps/cli": "^2.6.2",
+    "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vanilla-extract/vite-plugin": "^5.1.0",
     "@vitejs/plugin-react": "^4.6.0",
-    "@biomejs/biome": "^2.0.6",
-    "@tauri-apps/cli": "^2.6.2",
-    "@types/node": "^24.0.10",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "typescript": "~5.8.3",
     "vite": "^7.0.1"
   }
