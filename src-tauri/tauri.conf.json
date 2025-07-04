@@ -19,7 +19,8 @@
         "height": 900,
         "transparent": true,
         "hiddenTitle": true,
-        "titleBarStyle": "Overlay"
+        "titleBarStyle": "Overlay",
+        "preventOverflow": true
       }
     ],
     "security": {

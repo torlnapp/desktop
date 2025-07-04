@@ -17,8 +17,8 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "~/*": ["./src/*"],
-      "@vanta-design/desktop/*": ["../../../vanta-design/*"],
-      "@/*": ["../../../vanta-design/src/*"]
+      "@vanta-design/desktop/*": ["../vanta-design/*"],
+      "@/*": ["../vanta-design/src/*"]
     }
   },
   "include": ["src", "../vanta-design"]
